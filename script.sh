@@ -1,5 +1,3 @@
-webkit2png -W 1920 -d https://www.reddit.com/r/nba -D screenshots
-cd ~/rnba
-git add .
-git commit -m "updated screenshots"
-git push
+#!/bin/bash
+date=$(date +%m-%d-%Y) 
+wkhtmltoimage -f png --width 1920 http://www.reddit.com/r/nba screenshots/${date}.png
